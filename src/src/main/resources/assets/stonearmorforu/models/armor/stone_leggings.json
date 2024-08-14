@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "stonearmorforu:textures/models/armor/stonearmor_layer_2"
+    }
+  }
+  

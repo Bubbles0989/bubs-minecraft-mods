@@ -1,0 +1,29 @@
+
+modLoader = "javafml"
+loaderVersion = "[50,)"
+license = "MIT"
+issueTrackerURL = ""
+modProperties = "ModProperties"
+
+[[mods]]
+modId = "stonearmorforu"
+version = "6.6.6"
+displayName = "Stone Armor ForU Mod"
+description = "A mod that adds armor made of stone blocks."
+authors = "bub"
+displayURL = ""
+
+[[dependencies.stonearmorforu]]
+modId = "forge"
+mandatory = true
+versionRange = "[50,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.stonearmorforu]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,1.21)"
+ordering = "NONE"
+side = "BOTH"
+
