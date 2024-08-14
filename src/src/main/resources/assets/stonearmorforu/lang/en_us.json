@@ -2,5 +2,6 @@
   "item.stonearmorforu.stone_helmet": "Stone Helmet",
   "item.stonearmorforu.stone_chestplate": "Stone Chestplate",
   "item.stonearmorforu.stone_leggings": "Stone Leggings",
-  "item.stonearmorforu.stone_boots": "Stone Boots"
+  "item.stonearmorforu.stone_boots": "Stone Boots",
+  "creativetab.stonearmor": "Stone Armor"
 }

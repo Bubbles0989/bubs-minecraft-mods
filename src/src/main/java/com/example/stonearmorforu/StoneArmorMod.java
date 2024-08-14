@@ -1,6 +1,9 @@
 package com.example.stonearmorforu;
 
 import net.minecraftforge.fml.common.Mod;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,15 +19,15 @@ public class StoneArmorMod {
     public StoneArmorMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register common setup method for modloading
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::onClientSetup);
+        modEventBus.addListener(ModEventSubscriber::onBuildCreativeModeTabContents);
 
-        // Register the item and block registries
         ModItems.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation("stonearmorforu", "stonearmor"), ModCreativeTabs.STONE_ARMOR_TAB);
     }
 
     @SubscribeEvent
