@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "armorforu:textures/models/armor/cobblestonearmor_layer_2"
+    }
+  }
+  

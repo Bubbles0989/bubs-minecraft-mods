@@ -7,9 +7,9 @@ plugins {
 }
 
 version = mod_version
-group = "stonearmorforu"
+group = "armorforu"
 
-archivesBaseName = 'StoneArmorMod'
+archivesBaseName = 'ArmorForU-Mod'
 version = '1.0.0'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
