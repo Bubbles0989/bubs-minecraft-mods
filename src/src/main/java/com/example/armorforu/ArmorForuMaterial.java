@@ -32,6 +32,22 @@ public class ArmorForuMaterial {
         0.0F
     );
 
+    public static final ArmorMaterial COBBLEDDEEPSLATE_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 4,
+            ArmorItem.Type.CHESTPLATE, 10,
+            ArmorItem.Type.LEGGINGS, 12,
+            ArmorItem.Type.BOOTS, 4
+        ),
+        9, 
+        Holder.direct(SoundEvents.DEEPSLATE_BREAK), // Use appropriate sound event
+        () -> Ingredient.of(Items.COBBLED_DEEPSLATE),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "cobbleddeepslate"))),
+        0.0F, 
+        0.0F
+    );
+
     public static int getDurabilityForSlot(EquipmentSlot slot) {
         int[] BASE_DURABILITY = {1, 3, 2, 1};
         return BASE_DURABILITY[slot.getIndex()] * 15;

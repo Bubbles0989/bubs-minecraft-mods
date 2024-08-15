@@ -3,5 +3,9 @@
   "item.armorforu.cobblestone_chestplate": "Cobblestone Chestplate",
   "item.armorforu.cobblestone_leggings": "Cobblestone Leggings",
   "item.armorforu.cobblestone_boots": "Cobblestone Boots",
-  "creativetab.cobblestonearmor": "Cobblestone Armor"
+  "item.armorforu.cobbleddeepslate_helmet": "Cobbled Deepslate Helmet",
+  "item.armorforu.cobbleddeepslate_chestplate": "Cobbled Deepslate Chestplate",
+  "item.armorforu.cobbleddeepslate_leggings": "Cobbled Deepslate Leggings",
+  "item.armorforu.cobbleddeepslate_boots": "Cobbled Deepslate Boots",
+  "creativetab.armorforu": "Armorforu Armors"
 }

@@ -32,6 +32,22 @@ public class ModItems {
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
 
+    public static final RegistryObject<Item> COBBLEDDEEPSLATE_HELMET = ITEMS.register("cobbleddeepslate_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> COBBLEDDEEPSLATE_CHESTPLATE = ITEMS.register("cobbleddeepslate_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> COBBLEDDEEPSLATE_LEGGINGS = ITEMS.register("cobbleddeepslate_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> COBBLEDDEEPSLATE_BOOTS = ITEMS.register("cobbleddeepslate_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
+
     // Method to register items to the event bus
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

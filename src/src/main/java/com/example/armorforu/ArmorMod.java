@@ -27,7 +27,7 @@ public class ArmorMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation("armorforu", "cobblestonearmor"), ModCreativeTabs.COBBLESTONE_ARMOR_TAB);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation("armorforu", "armorforu"), ModCreativeTabs.ARMORFORU_TAB);
     }
 
     @SubscribeEvent

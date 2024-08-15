@@ -15,7 +15,7 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onBuildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
         CreativeModeTab eventTab = event.getTab();
-        CreativeModeTab armorTab = ModCreativeTabs.COBBLESTONE_ARMOR_TAB;
+        CreativeModeTab armorTab = ModCreativeTabs.ARMORFORU_TAB;
         ResourceLocation eventTabLocation = getResourceLocation(eventTab);
         ResourceLocation armorTabLocation = getResourceLocation(armorTab);
         
@@ -24,6 +24,10 @@ public class ModEventSubscriber {
             event.accept(ModItems.COBBLESTONE_CHESTPLATE.get());
             event.accept(ModItems.COBBLESTONE_LEGGINGS.get());
             event.accept(ModItems.COBBLESTONE_BOOTS.get());
+            event.accept(ModItems.COBBLEDDEEPSLATE_HELMET.get());
+            event.accept(ModItems.COBBLEDDEEPSLATE_CHESTPLATE.get());
+            event.accept(ModItems.COBBLEDDEEPSLATE_LEGGINGS.get());
+            event.accept(ModItems.COBBLEDDEEPSLATE_BOOTS.get());
         }
     }
 
