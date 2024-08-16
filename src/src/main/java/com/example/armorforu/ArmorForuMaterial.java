@@ -34,10 +34,10 @@ public class ArmorForuMaterial {
 
     public static final ArmorMaterial COBBLEDDEEPSLATE_ARMOR = new ArmorMaterial(
         Map.of(
-            ArmorItem.Type.HELMET, 4,
-            ArmorItem.Type.CHESTPLATE, 10,
-            ArmorItem.Type.LEGGINGS, 12,
-            ArmorItem.Type.BOOTS, 4
+            ArmorItem.Type.HELMET, 3,
+            ArmorItem.Type.CHESTPLATE, 6,
+            ArmorItem.Type.LEGGINGS, 7,
+            ArmorItem.Type.BOOTS, 3
         ),
         9, 
         Holder.direct(SoundEvents.DEEPSLATE_BREAK), // Use appropriate sound event
