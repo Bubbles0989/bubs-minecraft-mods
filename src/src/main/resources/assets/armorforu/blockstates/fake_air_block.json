@@ -1,6 +1,7 @@
 {
     "variants": {
-      "": { "model": "armorforu:block/fake_air_block" }
+      "": {
+        "model": "minecraft:block/air"
+      }
     }
   }
-  
