@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "XTX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:leather"
+      },
+      "T": {
+        "item": "minecraft:torch"
+      }
+    },
+    "result": {
+      "id": "armorforu:torch_helmet",
+      "count": 1
+    }
+  }
+  

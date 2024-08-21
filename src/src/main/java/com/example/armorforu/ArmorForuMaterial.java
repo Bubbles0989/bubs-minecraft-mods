@@ -1,4 +1,3 @@
-// package com.example.stonearmorforu;
 
 package com.example.armorforu;
 
@@ -44,6 +43,34 @@ public class ArmorForuMaterial {
         () -> Ingredient.of(Items.COBBLED_DEEPSLATE),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "cobbleddeepslate"))),
+        0.0F, 
+        0.0F
+    );
+    public static final ArmorMaterial NETHERRACK_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 2,
+            ArmorItem.Type.LEGGINGS, 2,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        9, 
+        Holder.direct(SoundEvents.NETHERRACK_PLACE), // Use appropriate sound event
+        () -> Ingredient.of(Items.NETHERRACK),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "netherrack"))),
+        0.0F, 
+        0.0F
+    );
+
+    public static final ArmorMaterial TORCH_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 5
+        ),
+        9, 
+        Holder.direct(SoundEvents.FIRE_EXTINGUISH), // Use appropriate sound event
+        () -> Ingredient.of(Items.TORCH),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "torch"))),
         0.0F, 
         0.0F
     );

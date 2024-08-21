@@ -28,6 +28,11 @@ public class ModEventSubscriber {
             event.accept(ModItems.COBBLEDDEEPSLATE_CHESTPLATE.get());
             event.accept(ModItems.COBBLEDDEEPSLATE_LEGGINGS.get());
             event.accept(ModItems.COBBLEDDEEPSLATE_BOOTS.get());
+            event.accept(ModItems.NETHERRACK_HELMET.get());
+            event.accept(ModItems.NETHERRACK_CHESTPLATE.get());
+            event.accept(ModItems.NETHERRACK_LEGGINGS.get());
+            event.accept(ModItems.NETHERRACK_BOOTS.get());
+            event.accept(ModItems.TORCH_HELMET.get());
         }
     }
 
@@ -40,6 +45,5 @@ public class ModEventSubscriber {
         
         return tabId;
     }
-
 
 }

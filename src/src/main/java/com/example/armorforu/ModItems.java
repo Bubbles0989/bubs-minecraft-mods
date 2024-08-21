@@ -4,16 +4,21 @@ package com.example.armorforu;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.core.Holder;
 
 public class ModItems {
 
     // Registering items using DeferredRegister
+
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "armorforu");
+
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "armorforu");
 
     // Registering the stone armor items with the new StoneArmorMaterial
     public static final RegistryObject<Item> COBBLESTONE_HELMET = ITEMS.register("cobblestone_helmet", 
@@ -48,8 +53,32 @@ public class ModItems {
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
 
+    public static final RegistryObject<Item> NETHERRACK_HELMET = ITEMS.register("netherrack_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> NETHERRACK_CHESTPLATE = ITEMS.register("netherrack_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> NETHERRACK_LEGGINGS = ITEMS.register("netherrack_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> NETHERRACK_BOOTS = ITEMS.register("netherrack_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+
+    public static final RegistryObject<Block> FAKE_AIR_BLOCK = BLOCKS.register("fake_air_block", 
+        () -> new Block(BlockBehaviour.Properties.of().lightLevel((state) -> 15).noCollission().noLootTable().instabreak().dynamicShape().liquid()));
+    
     // Method to register items to the event bus
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+        BLOCKS.register(eventBus);
     }
 }

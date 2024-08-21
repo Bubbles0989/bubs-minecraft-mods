@@ -20,6 +20,11 @@ public class ModCreativeTabs {
             output.accept(ModItems.COBBLEDDEEPSLATE_CHESTPLATE.get());
             output.accept(ModItems.COBBLEDDEEPSLATE_LEGGINGS.get());
             output.accept(ModItems.COBBLEDDEEPSLATE_BOOTS.get());
+            output.accept(ModItems.NETHERRACK_HELMET.get());
+            output.accept(ModItems.NETHERRACK_CHESTPLATE.get());
+            output.accept(ModItems.NETHERRACK_LEGGINGS.get());
+            output.accept(ModItems.NETHERRACK_BOOTS.get());
+            output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();
 }

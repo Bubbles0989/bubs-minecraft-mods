@@ -13,7 +13,8 @@ This is a spot for all of the minecraft mods I plan to make. I need to study Jav
 - :thought_balloon: Many Armors Mod (An extension of my first one)
   - armors to be included: cobblestone, cobbledeepslate, netherrack, glass, lapis, emerald, amethyst, quartz, coal, copper, netherbrick, redstone, torch helmet
 - :thought_balloon: Many Weapons Mod (And extension on the second one)
-- :thought_balloon: More Animals Mod (Capybara)
+  - add the swords for cobblestone, cobbledeepslate, netherrack, netherbrick, glass, lapis, emerald, amethyst, quartz, coal, copper, redstone, torch helmet
+  - add bows of alternate types: iron, gold, diamond, lapis, emerald, amethyst, quartz, coal, copper, redstone 
 - :thought_balloon: Pink Ore mod (New ore with natural generation like lapis, armor, tools, block can be crafted (strongest in water on sunny days, stinky lines when having the full set(perferably pink)))
 
 ## Authors 
