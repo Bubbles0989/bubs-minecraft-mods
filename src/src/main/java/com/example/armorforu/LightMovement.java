@@ -33,13 +33,13 @@ public class LightMovement {
                 if (isWearingHelmet) {
                     if (previousPos == null || !currentPos.equals(previousPos)) {
                         if (previousPos != null) {
-                            world.removeBlock(previousPos, false); // Remove the fake air block
+                            world.removeBlock(previousPos, false);
                         }
                         world.setBlock(currentPos, ModItems.FAKE_AIR_BLOCK.get().defaultBlockState(), 3);
                         playerLightBlocks.put(player, currentPos);
                     }
                 } else if (previousPos != null) {
-                    world.removeBlock(previousPos, false); // Remove the fake air block
+                    world.removeBlock(previousPos, false);
                     playerLightBlocks.remove(player);
                 }
             }
@@ -56,7 +56,7 @@ public class LightMovement {
                 ServerLevel world = (ServerLevel) player.level();
                 BlockPos pos = playerLightBlocks.remove(player);
                 if (pos != null) {
-                    world.removeBlock(pos, false); // Remove the fake air block
+                    world.removeBlock(pos, false);
                 }
             }
         }
