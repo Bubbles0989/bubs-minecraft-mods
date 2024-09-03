@@ -69,6 +69,22 @@ public class ModItems {
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
 
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
+
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
     );

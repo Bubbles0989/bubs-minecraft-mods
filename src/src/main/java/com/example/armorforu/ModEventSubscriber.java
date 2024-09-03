@@ -35,7 +35,7 @@ public class ModEventSubscriber {
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }
-
+    
     public static ResourceLocation getResourceLocation(CreativeModeTab tab) {
         ResourceKey<CreativeModeTab> tabKey = BuiltInRegistries.CREATIVE_MODE_TAB.getResourceKey(tab).orElseThrow(
             () -> new IllegalStateException("Unregistered creative tab: " + tab)
@@ -45,5 +45,4 @@ public class ModEventSubscriber {
         
         return tabId;
     }
-
 }

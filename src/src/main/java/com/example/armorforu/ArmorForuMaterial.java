@@ -46,6 +46,7 @@ public class ArmorForuMaterial {
         0.0F, 
         0.0F
     );
+
     public static final ArmorMaterial NETHERRACK_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 2,
@@ -58,6 +59,22 @@ public class ArmorForuMaterial {
         () -> Ingredient.of(Items.NETHERRACK),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "netherrack"))),
+        0.0F, 
+        0.0F
+    );
+
+    public static final ArmorMaterial AMETHYST_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 2,
+            ArmorItem.Type.LEGGINGS, 2,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        9, 
+        Holder.direct(SoundEvents.AMETHYST_BLOCK_CHIME), // Use appropriate sound event
+        () -> Ingredient.of(Items.AMETHYST_SHARD),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "amethyst"))),
         0.0F, 
         0.0F
     );
