@@ -23,7 +23,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.BOOTS, 2
         ),
         9, 
-        Holder.direct(SoundEvents.STONE_BREAK), // Use appropriate sound event
+        Holder.direct(SoundEvents.STONE_BREAK), 
         () -> Ingredient.of(Items.COBBLESTONE),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "cobblestone"))),
@@ -39,7 +39,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.BOOTS, 3
         ),
         9, 
-        Holder.direct(SoundEvents.DEEPSLATE_BREAK), // Use appropriate sound event
+        Holder.direct(SoundEvents.DEEPSLATE_BREAK), 
         () -> Ingredient.of(Items.COBBLED_DEEPSLATE),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "cobbleddeepslate"))),
@@ -55,10 +55,26 @@ public class ArmorForuMaterial {
             ArmorItem.Type.BOOTS, 2
         ),
         9, 
-        Holder.direct(SoundEvents.NETHERRACK_PLACE), // Use appropriate sound event
+        Holder.direct(SoundEvents.NETHERRACK_PLACE),
         () -> Ingredient.of(Items.NETHERRACK),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "netherrack"))),
+        0.0F, 
+        0.0F
+    );
+
+    public static final ArmorMaterial NETHERBRICK_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 2,
+            ArmorItem.Type.LEGGINGS, 2,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        9, 
+        Holder.direct(SoundEvents.NETHER_BRICKS_STEP),
+        () -> Ingredient.of(Items.NETHER_BRICK),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "netherbrick"))),
         0.0F, 
         0.0F
     );

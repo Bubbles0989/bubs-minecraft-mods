@@ -32,6 +32,14 @@ public class ModEventSubscriber {
             event.accept(ModItems.NETHERRACK_CHESTPLATE.get());
             event.accept(ModItems.NETHERRACK_LEGGINGS.get());
             event.accept(ModItems.NETHERRACK_BOOTS.get());
+            event.accept(ModItems.NETHERBRICK_HELMET.get());
+            event.accept(ModItems.NETHERBRICK_CHESTPLATE.get());
+            event.accept(ModItems.NETHERBRICK_LEGGINGS.get());
+            event.accept(ModItems.NETHERBRICK_BOOTS.get());
+            event.accept(ModItems.AMETHYST_HELMET.get());
+            event.accept(ModItems.AMETHYST_CHESTPLATE.get());
+            event.accept(ModItems.AMETHYST_LEGGINGS.get());
+            event.accept(ModItems.AMETHYST_BOOTS.get());
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }
