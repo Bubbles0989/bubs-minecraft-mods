@@ -5,6 +5,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,19 +28,32 @@ public class LightMovement {
             for (Player player : world.players()) {
                 ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
                 boolean isWearingHelmet = helmet.getItem() == ModItems.TORCH_HELMET.get();
-                BlockPos currentPos = player.blockPosition().above(2);
+                BlockPos currentPos = player.blockPosition().above();
                 BlockPos previousPos = playerLightBlocks.get(player);
 
                 if (isWearingHelmet) {
                     if (previousPos == null || !currentPos.equals(previousPos)) {
+                        // Remove the old light block only if it's still fake air
                         if (previousPos != null) {
-                            world.removeBlock(previousPos, false);
+                            BlockState previousBlockState = world.getBlockState(previousPos);
+                            if (previousBlockState.getBlock() == ModItems.FAKE_AIR_BLOCK.get()) {
+                                world.removeBlock(previousPos, false); // Don't break blocks
+                            }
                         }
-                        world.setBlock(currentPos, ModItems.FAKE_AIR_BLOCK.get().defaultBlockState(), 3);
-                        playerLightBlocks.put(player, currentPos);
+                        
+                        // Only place fake air block if the current position is replaceable (air, water, etc.)
+                        BlockState currentBlockState = world.getBlockState(currentPos);
+                        if (currentBlockState.isAir() || currentBlockState.canBeReplaced()) {
+                            world.setBlock(currentPos, ModItems.FAKE_AIR_BLOCK.get().defaultBlockState(), 3);
+                            playerLightBlocks.put(player, currentPos);
+                        }
                     }
                 } else if (previousPos != null) {
-                    world.removeBlock(previousPos, false);
+                    // Remove the light block when the player takes off the helmet, if it's still fake air
+                    BlockState previousBlockState = world.getBlockState(previousPos);
+                    if (previousBlockState.getBlock() == ModItems.FAKE_AIR_BLOCK.get()) {
+                        world.removeBlock(previousPos, false);
+                    }
                     playerLightBlocks.remove(player);
                 }
             }
@@ -56,7 +70,10 @@ public class LightMovement {
                 ServerLevel world = (ServerLevel) player.level();
                 BlockPos pos = playerLightBlocks.remove(player);
                 if (pos != null) {
-                    world.removeBlock(pos, false);
+                    BlockState blockState = world.getBlockState(pos);
+                    if (blockState.getBlock() == ModItems.FAKE_AIR_BLOCK.get()) {
+                        world.removeBlock(pos, false);
+                    }
                 }
             }
         }

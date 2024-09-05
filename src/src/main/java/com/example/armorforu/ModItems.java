@@ -5,11 +5,20 @@ package com.example.armorforu;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+
+import org.jetbrains.annotations.ApiStatus.OverrideOnly;
+
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 
 public class ModItems {
@@ -106,7 +115,31 @@ public class ModItems {
     );
 
     public static final RegistryObject<Block> FAKE_AIR_BLOCK = BLOCKS.register("fake_air_block", 
-        () -> new Block(BlockBehaviour.Properties.of().air().lightLevel((state) -> 15)));
+        () -> new Block(BlockBehaviour.Properties.of().air().noCollission().noOcclusion().lightLevel((state) -> 15)) {
+            @OverrideOnly
+            public boolean isAir(BlockState state, BlockGetter world, BlockPos pos) {
+                return true;  
+            }
+
+            @OverrideOnly
+            public boolean canOcclude(BlockState state) {
+                return false;  
+            }
+
+            @SuppressWarnings("null")
+            @Override
+            public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+                return Shapes.empty();  
+            }
+            
+            @SuppressWarnings("null")
+            @Override
+            public boolean useShapeForLightOcclusion(BlockState state) {
+                return false;  
+            }
+        }
+    );
+
     
     // Method to register items to the event bus
     public static void register(IEventBus eventBus) {
