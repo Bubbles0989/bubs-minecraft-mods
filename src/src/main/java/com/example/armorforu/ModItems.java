@@ -106,7 +106,7 @@ public class ModItems {
     );
 
     public static final RegistryObject<Block> FAKE_AIR_BLOCK = BLOCKS.register("fake_air_block", 
-        () -> new Block(BlockBehaviour.Properties.of().air().noCollission().noLootTable().lightLevel((state) -> 15)));
+        () -> new Block(BlockBehaviour.Properties.of().air().lightLevel((state) -> 15)));
     
     // Method to register items to the event bus
     public static void register(IEventBus eventBus) {

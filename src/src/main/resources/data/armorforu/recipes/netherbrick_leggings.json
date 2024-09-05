@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "XXX",
+      "X X",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:nether_brick"
+      }
+    },
+    "result": {
+      "id": "armorforu:netherbrick_leggings",
+      "count": 1
+    }
+  }
+  

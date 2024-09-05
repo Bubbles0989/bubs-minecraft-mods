@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "XXX",
+      "X X",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:amethyst_shard"
+      }
+    },
+    "result": {
+      "id": "armorforu:amethyst_leggings",
+      "count": 1
+    }
+  }
+  

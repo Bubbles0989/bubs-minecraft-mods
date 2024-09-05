@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "XXX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:amethyst_shard"
+      }
+    },
+    "result": {
+      "id": "armorforu:amethyst_helmet",
+      "count": 1
+    }
+  }
+  

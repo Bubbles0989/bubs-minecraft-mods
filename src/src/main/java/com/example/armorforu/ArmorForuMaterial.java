@@ -65,10 +65,10 @@ public class ArmorForuMaterial {
 
     public static final ArmorMaterial NETHERBRICK_ARMOR = new ArmorMaterial(
         Map.of(
-            ArmorItem.Type.HELMET, 2,
-            ArmorItem.Type.CHESTPLATE, 2,
-            ArmorItem.Type.LEGGINGS, 2,
-            ArmorItem.Type.BOOTS, 2
+            ArmorItem.Type.HELMET, 4,
+            ArmorItem.Type.CHESTPLATE, 7,
+            ArmorItem.Type.LEGGINGS, 8,
+            ArmorItem.Type.BOOTS, 4
         ),
         9, 
         Holder.direct(SoundEvents.NETHER_BRICKS_STEP),
@@ -82,8 +82,8 @@ public class ArmorForuMaterial {
     public static final ArmorMaterial AMETHYST_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 2,
-            ArmorItem.Type.CHESTPLATE, 2,
-            ArmorItem.Type.LEGGINGS, 2,
+            ArmorItem.Type.CHESTPLATE, 5,
+            ArmorItem.Type.LEGGINGS, 6,
             ArmorItem.Type.BOOTS, 2
         ),
         9, 
