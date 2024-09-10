@@ -28,6 +28,10 @@ public class ModCreativeTabs {
             output.accept(ModItems.NETHERBRICK_CHESTPLATE.get());
             output.accept(ModItems.NETHERBRICK_LEGGINGS.get());
             output.accept(ModItems.NETHERBRICK_BOOTS.get());
+            output.accept(ModItems.GLASS_HELMET.get());
+            output.accept(ModItems.GLASS_CHESTPLATE.get());
+            output.accept(ModItems.GLASS_LEGGINGS.get());
+            output.accept(ModItems.GLASS_BOOTS.get());
             output.accept(ModItems.AMETHYST_HELMET.get());
             output.accept(ModItems.AMETHYST_CHESTPLATE.get());
             output.accept(ModItems.AMETHYST_LEGGINGS.get());

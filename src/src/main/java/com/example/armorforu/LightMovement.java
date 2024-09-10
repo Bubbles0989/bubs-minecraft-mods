@@ -33,15 +33,13 @@ public class LightMovement {
 
                 if (isWearingHelmet) {
                     if (previousPos == null || !currentPos.equals(previousPos)) {
-                        // Remove the old light block only if it's still fake air
                         if (previousPos != null) {
                             BlockState previousBlockState = world.getBlockState(previousPos);
                             if (previousBlockState.getBlock() == ModItems.FAKE_AIR_BLOCK.get()) {
-                                world.removeBlock(previousPos, false); // Don't break blocks
+                                world.removeBlock(previousPos, false);
                             }
                         }
                         
-                        // Only place fake air block if the current position is replaceable (air, water, etc.)
                         BlockState currentBlockState = world.getBlockState(currentPos);
                         if (currentBlockState.isAir() || currentBlockState.canBeReplaced()) {
                             world.setBlock(currentPos, ModItems.FAKE_AIR_BLOCK.get().defaultBlockState(), 3);
@@ -49,7 +47,6 @@ public class LightMovement {
                         }
                     }
                 } else if (previousPos != null) {
-                    // Remove the light block when the player takes off the helmet, if it's still fake air
                     BlockState previousBlockState = world.getBlockState(previousPos);
                     if (previousBlockState.getBlock() == ModItems.FAKE_AIR_BLOCK.get()) {
                         world.removeBlock(previousPos, false);

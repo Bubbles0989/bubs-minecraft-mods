@@ -36,6 +36,10 @@ public class ModEventSubscriber {
             event.accept(ModItems.NETHERBRICK_CHESTPLATE.get());
             event.accept(ModItems.NETHERBRICK_LEGGINGS.get());
             event.accept(ModItems.NETHERBRICK_BOOTS.get());
+            event.accept(ModItems.GLASS_HELMET.get());
+            event.accept(ModItems.GLASS_CHESTPLATE.get());
+            event.accept(ModItems.GLASS_LEGGINGS.get());
+            event.accept(ModItems.GLASS_BOOTS.get());
             event.accept(ModItems.AMETHYST_HELMET.get());
             event.accept(ModItems.AMETHYST_CHESTPLATE.get());
             event.accept(ModItems.AMETHYST_LEGGINGS.get());

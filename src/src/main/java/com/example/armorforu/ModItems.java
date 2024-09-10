@@ -94,6 +94,22 @@ public class ModItems {
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
 
+    public static final RegistryObject<Item> GLASS_HELMET = ITEMS.register("glass_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> GLASS_CHESTPLATE = ITEMS.register("glass_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> GLASS_LEGGINGS = ITEMS.register("glass_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> GLASS_BOOTS = ITEMS.register("glass_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
+
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
     );

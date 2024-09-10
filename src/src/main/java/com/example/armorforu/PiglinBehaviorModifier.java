@@ -16,7 +16,7 @@ public class PiglinBehaviorModifier {
     public static void onPiglinTargeting(LivingChangeTargetEvent event) {
         if (event.getEntity() instanceof Piglin) {
             if (event.getNewTarget() instanceof Player player) {
-                if (isWearingCustomArmor(player)) {
+                if (isWearingNetherArmor(player)) {
                     ((Piglin) event.getEntity()).setAggressive(false);
                     event.setCanceled(true);
                 }
@@ -24,9 +24,11 @@ public class PiglinBehaviorModifier {
         }
     }
 
-    private static boolean isWearingCustomArmor(Player player) {
+    private static boolean isWearingNetherArmor(Player player) {
         for (ItemStack itemStack : player.getArmorSlots()) {
             if (itemStack.getItem() instanceof ArmorItem armorItem && armorItem.getMaterial().get() == ArmorForuMaterial.NETHERRACK_ARMOR) {
+                return true;
+            } else if (itemStack.getItem() instanceof ArmorItem armorItem && armorItem.getMaterial().get() == ArmorForuMaterial.NETHERBRICK_ARMOR) {
                 return true;
             }
         }

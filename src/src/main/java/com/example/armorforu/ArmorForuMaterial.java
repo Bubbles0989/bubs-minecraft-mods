@@ -79,6 +79,22 @@ public class ArmorForuMaterial {
         0.0F
     );
 
+    public static final ArmorMaterial GLASS_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 1,
+            ArmorItem.Type.CHESTPLATE, 2,
+            ArmorItem.Type.LEGGINGS, 3,
+            ArmorItem.Type.BOOTS, 1
+        ),
+        9, 
+        Holder.direct(SoundEvents.GLASS_STEP),
+        () -> Ingredient.of(Items.GLASS),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "glass"))),
+        0.0F, 
+        0.0F
+    );
+
     public static final ArmorMaterial AMETHYST_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 2,
@@ -100,7 +116,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.HELMET, 5
         ),
         9, 
-        Holder.direct(SoundEvents.FIRE_EXTINGUISH), // Use appropriate sound event
+        Holder.direct(SoundEvents.LEVER_CLICK), // Use appropriate sound event
         () -> Ingredient.of(Items.TORCH),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "torch"))),

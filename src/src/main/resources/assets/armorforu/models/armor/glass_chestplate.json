@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "armorforu:textures/models/armor/glass_layer_1"
+  }
+}
