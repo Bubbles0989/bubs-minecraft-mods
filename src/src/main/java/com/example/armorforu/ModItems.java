@@ -126,6 +126,22 @@ public class ModItems {
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
 
+    public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
+    
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
     );

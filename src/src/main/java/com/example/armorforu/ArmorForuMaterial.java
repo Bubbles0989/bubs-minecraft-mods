@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 
 import java.util.Map;
+
 import java.util.List;
 
 public class ArmorForuMaterial {
@@ -22,7 +23,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 6,
             ArmorItem.Type.BOOTS, 2
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.STONE_BREAK), 
         () -> Ingredient.of(Items.COBBLESTONE),
         List.of(
@@ -38,7 +39,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 7,
             ArmorItem.Type.BOOTS, 3
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.DEEPSLATE_BREAK), 
         () -> Ingredient.of(Items.COBBLED_DEEPSLATE),
         List.of(
@@ -54,7 +55,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 2,
             ArmorItem.Type.BOOTS, 2
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.NETHERRACK_PLACE),
         () -> Ingredient.of(Items.NETHERRACK),
         List.of(
@@ -70,7 +71,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 8,
             ArmorItem.Type.BOOTS, 4
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.NETHER_BRICKS_STEP),
         () -> Ingredient.of(Items.NETHER_BRICK),
         List.of(
@@ -86,7 +87,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 3,
             ArmorItem.Type.BOOTS, 1
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.GLASS_STEP),
         () -> Ingredient.of(Items.GLASS),
         List.of(
@@ -102,7 +103,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.LEGGINGS, 6,
             ArmorItem.Type.BOOTS, 2
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.AMETHYST_BLOCK_CHIME), // Use appropriate sound event
         () -> Ingredient.of(Items.AMETHYST_SHARD),
         List.of(
@@ -111,11 +112,27 @@ public class ArmorForuMaterial {
         0.0F
     );
 
+    public static final ArmorMaterial LAPIS_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 5,
+            ArmorItem.Type.LEGGINGS, 6,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        25, 
+        Holder.direct(SoundEvents.ENCHANTMENT_TABLE_USE), // Use appropriate sound event
+        () -> Ingredient.of(Items.LAPIS_LAZULI),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "lapis"))),
+        0.0F, 
+        0.0F
+    );
+
     public static final ArmorMaterial TORCH_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 5
         ),
-        9, 
+        25, 
         Holder.direct(SoundEvents.LEVER_CLICK), // Use appropriate sound event
         () -> Ingredient.of(Items.TORCH),
         List.of(

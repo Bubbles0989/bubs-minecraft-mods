@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+      "XXX",
+      "X X",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:lapis_lazuli"
+      }
+    },
+    "result": {
+      "id": "armorforu:lapis_leggings",
+      "count": 1
+    }
+  }
+  

@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 
 @Mod.EventBusSubscriber(modid = ArmorMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ModEventSubscriber {
+public class CreativeTabEventSubscriber {
 
     @SubscribeEvent
     public static void onBuildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
@@ -44,6 +44,10 @@ public class ModEventSubscriber {
             event.accept(ModItems.AMETHYST_CHESTPLATE.get());
             event.accept(ModItems.AMETHYST_LEGGINGS.get());
             event.accept(ModItems.AMETHYST_BOOTS.get());
+            event.accept(ModItems.LAPIS_HELMET.get());
+            event.accept(ModItems.LAPIS_CHESTPLATE.get());
+            event.accept(ModItems.LAPIS_LEGGINGS.get());
+            event.accept(ModItems.LAPIS_BOOTS.get());
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }

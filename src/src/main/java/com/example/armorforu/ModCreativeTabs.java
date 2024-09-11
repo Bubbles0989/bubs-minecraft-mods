@@ -36,6 +36,10 @@ public class ModCreativeTabs {
             output.accept(ModItems.AMETHYST_CHESTPLATE.get());
             output.accept(ModItems.AMETHYST_LEGGINGS.get());
             output.accept(ModItems.AMETHYST_BOOTS.get());
+            output.accept(ModItems.LAPIS_HELMET.get());
+            output.accept(ModItems.LAPIS_CHESTPLATE.get());
+            output.accept(ModItems.LAPIS_LEGGINGS.get());
+            output.accept(ModItems.LAPIS_BOOTS.get());
             output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();
