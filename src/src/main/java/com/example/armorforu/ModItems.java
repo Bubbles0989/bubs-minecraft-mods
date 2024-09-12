@@ -23,13 +23,10 @@ import net.minecraft.core.Holder;
 
 public class ModItems {
 
-    // Registering items using DeferredRegister
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "armorforu");
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "armorforu");
 
-    // Registering the stone armor items with the new StoneArmorMaterial
     public static final RegistryObject<Item> COBBLESTONE_HELMET = ITEMS.register("cobblestone_helmet", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
     );
@@ -172,8 +169,6 @@ public class ModItems {
         }
     );
 
-    
-    // Method to register items to the event bus
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
         BLOCKS.register(eventBus);
