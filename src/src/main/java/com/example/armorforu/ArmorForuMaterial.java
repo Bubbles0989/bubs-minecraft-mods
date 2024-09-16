@@ -11,11 +11,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 
 import java.util.Map;
-
 import java.util.List;
 
 
-public class ArmorForuMaterial {
+public class ArmorForuMaterial{
 
     public static final ArmorMaterial COBBLESTONE_ARMOR = new ArmorMaterial(
         Map.of(
@@ -105,7 +104,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.BOOTS, 2
         ),
         25, 
-        Holder.direct(SoundEvents.AMETHYST_BLOCK_CHIME), // Use appropriate sound event
+        Holder.direct(SoundEvents.AMETHYST_BLOCK_CHIME),
         () -> Ingredient.of(Items.AMETHYST_SHARD),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "amethyst"))),
@@ -121,7 +120,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.BOOTS, 2
         ),
         25, 
-        Holder.direct(SoundEvents.ENCHANTMENT_TABLE_USE), // Use appropriate sound event
+        Holder.direct(SoundEvents.ENCHANTMENT_TABLE_USE),
         () -> Ingredient.of(Items.LAPIS_LAZULI),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "lapis"))),
@@ -134,7 +133,7 @@ public class ArmorForuMaterial {
             ArmorItem.Type.HELMET, 5
         ),
         25, 
-        Holder.direct(SoundEvents.LEVER_CLICK), // Use appropriate sound event
+        Holder.direct(SoundEvents.STONE_BUTTON_CLICK_ON),
         () -> Ingredient.of(Items.TORCH),
         List.of(
         new ArmorMaterial.Layer(new ResourceLocation("armorforu", "torch"))),
@@ -143,7 +142,7 @@ public class ArmorForuMaterial {
     );
 
     public static int getDurabilityForSlot(EquipmentSlot slot) {
-        int[] BASE_DURABILITY = {1, 3, 2, 1};
+        int[] BASE_DURABILITY = {11, 16, 15, 13};
         return BASE_DURABILITY[slot.getIndex()] * 15;
     }
 }

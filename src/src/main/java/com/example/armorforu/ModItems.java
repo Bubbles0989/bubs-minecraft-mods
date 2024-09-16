@@ -2,6 +2,7 @@
 
 package com.example.armorforu;
 
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -140,9 +141,12 @@ public class ModItems {
     );
     
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
-
+ 
     public static final RegistryObject<Block> FAKE_AIR_BLOCK = BLOCKS.register("fake_air_block", 
         () -> new Block(BlockBehaviour.Properties.of().air().noCollission().noOcclusion().lightLevel((state) -> 15)) {
             @OverrideOnly
