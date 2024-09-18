@@ -48,6 +48,10 @@ public class CreativeTabEventSubscriber {
             event.accept(ModItems.LAPIS_CHESTPLATE.get());
             event.accept(ModItems.LAPIS_LEGGINGS.get());
             event.accept(ModItems.LAPIS_BOOTS.get());
+            event.accept(ModItems.EMERALD_HELMET.get());
+            event.accept(ModItems.EMERALD_CHESTPLATE.get());
+            event.accept(ModItems.EMERALD_LEGGINGS.get());
+            event.accept(ModItems.EMERALD_BOOTS.get());
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }

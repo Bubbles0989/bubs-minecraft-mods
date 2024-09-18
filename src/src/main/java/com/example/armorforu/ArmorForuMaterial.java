@@ -128,6 +128,22 @@ public class ArmorForuMaterial{
         0.0F
     );
 
+    public static final ArmorMaterial EMERALD_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 5,
+            ArmorItem.Type.LEGGINGS, 6,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        25, 
+        Holder.direct(SoundEvents.VILLAGER_CELEBRATE),
+        () -> Ingredient.of(Items.EMERALD),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "emerald"))),
+        0.0F, 
+        0.0F
+    );
+
     public static final ArmorMaterial TORCH_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 5
