@@ -155,6 +155,22 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
     );
+
+    public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+    );
+    
+    public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", 
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+    );
     
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
         () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 

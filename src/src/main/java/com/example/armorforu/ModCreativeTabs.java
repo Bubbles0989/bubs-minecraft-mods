@@ -44,6 +44,10 @@ public class ModCreativeTabs {
             output.accept(ModItems.EMERALD_CHESTPLATE.get());
             output.accept(ModItems.EMERALD_LEGGINGS.get());
             output.accept(ModItems.EMERALD_BOOTS.get());
+            output.accept(ModItems.QUARTZ_HELMET.get());
+            output.accept(ModItems.QUARTZ_CHESTPLATE.get());
+            output.accept(ModItems.QUARTZ_LEGGINGS.get());
+            output.accept(ModItems.QUARTZ_BOOTS.get());
             output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();
