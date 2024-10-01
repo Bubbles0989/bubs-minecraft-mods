@@ -157,19 +157,31 @@ public class ModItems {
     );
 
     public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.LEGGINGS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.BOOTS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
     
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
