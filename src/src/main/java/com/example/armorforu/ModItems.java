@@ -129,31 +129,52 @@ public class ModItems {
     );
     
     public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.LEGGINGS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.BOOTS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.LEGGINGS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.BOOTS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", 
