@@ -29,187 +29,262 @@ public class ModItems {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "armorforu");
 
     public static final RegistryObject<Item> COBBLESTONE_HELMET = ITEMS.register("cobblestone_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> COBBLESTONE_CHESTPLATE = ITEMS.register("cobblestone_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> COBBLESTONE_LEGGINGS = ITEMS.register("cobblestone_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> COBBLESTONE_BOOTS = ITEMS.register("cobblestone_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> COBBLEDDEEPSLATE_HELMET = ITEMS.register("cobbleddeepslate_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> COBBLEDDEEPSLATE_CHESTPLATE = ITEMS.register("cobbleddeepslate_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> COBBLEDDEEPSLATE_LEGGINGS = ITEMS.register("cobbleddeepslate_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> COBBLEDDEEPSLATE_BOOTS = ITEMS.register("cobbleddeepslate_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> NETHERRACK_HELMET = ITEMS.register("netherrack_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> NETHERRACK_CHESTPLATE = ITEMS.register("netherrack_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> NETHERRACK_LEGGINGS = ITEMS.register("netherrack_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> NETHERRACK_BOOTS = ITEMS.register("netherrack_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> NETHERBRICK_HELMET = ITEMS.register("netherbrick_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> NETHERBRICK_CHESTPLATE = ITEMS.register("netherbrick_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> NETHERBRICK_LEGGINGS = ITEMS.register("netherbrick_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> NETHERBRICK_BOOTS = ITEMS.register("netherbrick_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> GLASS_HELMET = ITEMS.register("glass_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> GLASS_CHESTPLATE = ITEMS.register("glass_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> GLASS_LEGGINGS = ITEMS.register("glass_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> GLASS_BOOTS = ITEMS.register("glass_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.HELMET,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.CHESTPLATE, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.CHESTPLATE,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.LEGGINGS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.LEGGINGS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.BOOTS, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.BOOTS,         
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.HELMET, new Item.Properties())
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.LEGGINGS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.LEGGINGS, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.BOOTS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.BOOTS, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.HELMET, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.HELMET, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.LEGGINGS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.LEGGINGS, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.BOOTS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.BOOTS, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
 
     public static final RegistryObject<Item> QUARTZ_HELMET = ITEMS.register("quartz_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.HELMET, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.HELMET, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
     );
     
     public static final RegistryObject<Item> QUARTZ_CHESTPLATE = ITEMS.register("quartz_chestplate", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
     );
     
     public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.LEGGINGS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.LEGGINGS, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
     );
     
     public static final RegistryObject<Item> QUARTZ_BOOTS = ITEMS.register("quartz_boots", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.BOOTS, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.BOOTS, 
         new Item.Properties()
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
     
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
-        () -> new ArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD))) 
     );
  
     public static final RegistryObject<Block> FAKE_AIR_BLOCK = BLOCKS.register("fake_air_block", 
