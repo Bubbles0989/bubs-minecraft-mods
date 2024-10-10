@@ -11,7 +11,7 @@ This is a spot for all of the minecraft mods I plan to make. I need to study Jav
 
 - :heavy_check_mark: Stone Armor Mod (My first one!)
 - :thought_balloon: Many Armors Mod (An extension of my first one)
-  - armors to be included: cobblestone :heavy_check_mark:, cobbledeepslate :heavy_check_mark:, netherrack :heavy_check_mark:, glass :heavy_check_mark:, lapis :thought_balloon:, emerald :heavy_check_mark:, amethyst :heavy_check_mark:, quartz :heavy_check_mark:, coal :thought_balloon:, copper :thought_balloon:, netherbrick :heavy_check_mark:, redstone :thought_balloon:, torch helmet :heavy_check_mark:
+  - armors to be included: cobblestone :heavy_check_mark:, cobbledeepslate :heavy_check_mark:, netherrack :heavy_check_mark:, glass :heavy_check_mark:, lapis :heavy_check_mark:, emerald :heavy_check_mark:, amethyst :heavy_check_mark:, quartz :heavy_check_mark:, coal :thought_balloon:, copper :thought_balloon:, netherbrick :heavy_check_mark:, redstone :thought_balloon:, torch helmet :heavy_check_mark:
 - :thought_balloon: Many Weapons Mod (An extension on the second one)
   - add the swords for cobblestone, cobbledeepslate, netherrack, glass, lapis, emerald, amethyst, quartz, coal, copper, netherbrick, redstone, torch helmet
   - add bows of alternate types: iron, gold, diamond, lapis, emerald, amethyst, quartz, coal, copper, redstone 

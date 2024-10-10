@@ -56,6 +56,10 @@ public class CreativeTabEventSubscriber {
             event.accept(ModItems.QUARTZ_CHESTPLATE.get());
             event.accept(ModItems.QUARTZ_LEGGINGS.get());
             event.accept(ModItems.QUARTZ_BOOTS.get());
+            event.accept(ModItems.COAL_HELMET.get());
+            event.accept(ModItems.COAL_CHESTPLATE.get());
+            event.accept(ModItems.COAL_LEGGINGS.get());
+            event.accept(ModItems.COAL_BOOTS.get());
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }

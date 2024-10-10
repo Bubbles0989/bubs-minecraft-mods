@@ -48,6 +48,10 @@ public class ModCreativeTabs {
             output.accept(ModItems.QUARTZ_CHESTPLATE.get());
             output.accept(ModItems.QUARTZ_LEGGINGS.get());
             output.accept(ModItems.QUARTZ_BOOTS.get());
+            output.accept(ModItems.COAL_HELMET.get());
+            output.accept(ModItems.COAL_CHESTPLATE.get());
+            output.accept(ModItems.COAL_LEGGINGS.get());
+            output.accept(ModItems.COAL_BOOTS.get());
             output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();

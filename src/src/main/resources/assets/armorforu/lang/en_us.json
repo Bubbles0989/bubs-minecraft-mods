@@ -35,6 +35,10 @@
   "item.armorforu.quartz_chestplate": "Quartz Chestplate",
   "item.armorforu.quartz_leggings": "Quartz Leggings",
   "item.armorforu.quartz_boots": "Quartz Boots",
+  "item.armorforu.coal_helmet": "Coal Helmet",
+  "item.armorforu.coal_chestplate": "Coal Chestplate",
+  "item.armorforu.coal_leggings": "Coal Leggings",
+  "item.armorforu.coal_boots": "Coal Boots",
   "item.armorforu.torch_helmet": "Torch Helmet",
   "creativetab.armorforu": "Armorforu Armors"
 }

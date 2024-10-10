@@ -279,6 +279,34 @@ public class ModItems {
             .stacksTo(1)
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
+
+    public static final RegistryObject<Item> COAL_HELMET = ITEMS.register("coal_helmet", 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COAL_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
+    );
+    
+    public static final RegistryObject<Item> COAL_CHESTPLATE = ITEMS.register("coal_chestplate", 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COAL_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+    );
+    
+    public static final RegistryObject<Item> COAL_LEGGINGS = ITEMS.register("coal_leggings", 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COAL_ARMOR), ArmorItem.Type.LEGGINGS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
+    );
+    
+    public static final RegistryObject<Item> COAL_BOOTS = ITEMS.register("coal_boots", 
+        () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COAL_ARMOR), ArmorItem.Type.BOOTS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
+    );
     
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 

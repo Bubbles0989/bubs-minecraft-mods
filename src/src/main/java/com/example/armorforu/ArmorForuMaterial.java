@@ -160,6 +160,22 @@ public class ArmorForuMaterial{
         0.0F
     );
 
+    public static final ArmorMaterial COAL_ARMOR = new ArmorMaterial(
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 5,
+            ArmorItem.Type.LEGGINGS, 6,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        25, 
+        Holder.direct(SoundEvents.FURNACE_FIRE_CRACKLE),
+        () -> Ingredient.of(Items.COAL),
+        List.of(
+        new ArmorMaterial.Layer(new ResourceLocation("armorforu", "coal"))),
+        0.0F, 
+        0.0F
+    );
+
     public static final ArmorMaterial TORCH_ARMOR = new ArmorMaterial(
         Map.of(
             ArmorItem.Type.HELMET, 5
