@@ -39,7 +39,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLESTONE_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> COBBLESTONE_LEGGINGS = ITEMS.register("cobblestone_leggings", 
@@ -67,7 +67,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COBBLEDDEEPSLATE_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> COBBLEDDEEPSLATE_LEGGINGS = ITEMS.register("cobbleddeepslate_leggings", 
@@ -95,7 +95,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERRACK_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> NETHERRACK_LEGGINGS = ITEMS.register("netherrack_leggings", 
@@ -123,7 +123,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.NETHERBRICK_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> NETHERBRICK_LEGGINGS = ITEMS.register("netherbrick_leggings", 
@@ -151,7 +151,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.GLASS_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> GLASS_LEGGINGS = ITEMS.register("glass_leggings", 
@@ -179,7 +179,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.AMETHYST_ARMOR), ArmorItem.Type.CHESTPLATE,         
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", 
@@ -207,7 +207,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.LAPIS_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", 
@@ -235,7 +235,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.EMERALD_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", 
@@ -263,7 +263,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.QUARTZ_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> QUARTZ_LEGGINGS = ITEMS.register("quartz_leggings", 
@@ -291,7 +291,7 @@ public class ModItems {
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.COAL_ARMOR), ArmorItem.Type.CHESTPLATE, 
         new Item.Properties()
             .stacksTo(1)
-            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.BODY)))
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
     );
     
     public static final RegistryObject<Item> COAL_LEGGINGS = ITEMS.register("coal_leggings", 
