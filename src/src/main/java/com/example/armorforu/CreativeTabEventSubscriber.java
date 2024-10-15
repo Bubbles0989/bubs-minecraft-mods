@@ -60,6 +60,10 @@ public class CreativeTabEventSubscriber {
             event.accept(ModItems.COAL_CHESTPLATE.get());
             event.accept(ModItems.COAL_LEGGINGS.get());
             event.accept(ModItems.COAL_BOOTS.get());
+            event.accept(ModItems.COPPER_HELMET.get());
+            event.accept(ModItems.COPPER_CHESTPLATE.get());
+            event.accept(ModItems.COPPER_LEGGINGS.get());
+            event.accept(ModItems.COPPER_BOOTS.get());
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }

@@ -308,6 +308,34 @@ public class ModItems {
             .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
     );
     
+    public static final RegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet", 
+        () -> new CopperArmorItem(Holder.direct(ArmorForuMaterial.COPPER_ARMOR), ArmorItem.Type.HELMET, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.HEAD)))
+    );
+    
+    public static final RegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", 
+        () -> new CopperArmorItem(Holder.direct(ArmorForuMaterial.COPPER_ARMOR), ArmorItem.Type.CHESTPLATE, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.CHEST)))
+    );
+    
+    public static final RegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings", 
+        () -> new CopperArmorItem(Holder.direct(ArmorForuMaterial.COPPER_ARMOR), ArmorItem.Type.LEGGINGS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.LEGS)))
+    );
+    
+    public static final RegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots", 
+        () -> new CopperArmorItem(Holder.direct(ArmorForuMaterial.COPPER_ARMOR), ArmorItem.Type.BOOTS, 
+        new Item.Properties()
+            .stacksTo(1)
+            .durability(ArmorForuMaterial.getDurabilityForSlot(EquipmentSlot.FEET)))
+    );
+
     public static final RegistryObject<Item> TORCH_HELMET = ITEMS.register("torch_helmet", 
         () -> new CustomArmorItem(Holder.direct(ArmorForuMaterial.TORCH_ARMOR), ArmorItem.Type.HELMET, 
         new Item.Properties()

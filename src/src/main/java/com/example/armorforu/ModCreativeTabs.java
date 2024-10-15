@@ -52,6 +52,10 @@ public class ModCreativeTabs {
             output.accept(ModItems.COAL_CHESTPLATE.get());
             output.accept(ModItems.COAL_LEGGINGS.get());
             output.accept(ModItems.COAL_BOOTS.get());
+            output.accept(ModItems.COPPER_HELMET.get());
+            output.accept(ModItems.COPPER_CHESTPLATE.get());
+            output.accept(ModItems.COPPER_LEGGINGS.get());
+            output.accept(ModItems.COPPER_BOOTS.get());
             output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();
