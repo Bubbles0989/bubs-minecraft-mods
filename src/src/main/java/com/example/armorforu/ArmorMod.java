@@ -21,6 +21,7 @@ public class ArmorMod {
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::onClientSetup);
+
         modEventBus.addListener(CreativeTabEventSubscriber::onBuildCreativeModeTabContents);
 
         ModItems.register(modEventBus);

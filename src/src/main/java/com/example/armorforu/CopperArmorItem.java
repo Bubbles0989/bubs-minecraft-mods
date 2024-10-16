@@ -14,58 +14,57 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CopperArmorItem extends CustomArmorItem {
     private static final String WEAR_TIME_KEY = "WearTime";
-    private static final int TICKS_PER_STAGE = 20 * 60 * 10;
+    private static final String OXIDATION_LEVEL_KEY = "OxidationLevel";
+    private static final int TICKS_PER_STAGE = 20 * 60 * 10; 
 
     public CopperArmorItem(Holder<ArmorMaterial> material, Type slot, Properties properties) {
         super(material, slot, properties);
     }
 
+    public int getOxidationLevel(ItemStack stack) {
+        CompoundTag nbt = (CompoundTag) stack.getTags();
+        return nbt.getInt(OXIDATION_LEVEL_KEY);
+    }
+
+    public void setOxidationLevel(ItemStack stack, int level) {
+        CompoundTag nbt = (CompoundTag) stack.getTags();
+        nbt.putInt(OXIDATION_LEVEL_KEY, Math.min(3, Math.max(0, level)));
+    }
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
+
         for (ItemStack armorPiece : player.getArmorSlots()) {
-            if (armorPiece.getItem() instanceof CopperArmorItem) {
+            if (armorPiece.getItem() instanceof CopperArmorItem copperArmor) {
                 CompoundTag nbt = (CompoundTag) armorPiece.getTags();
                 int wearTime = nbt.getInt(WEAR_TIME_KEY);
 
                 wearTime++;
                 nbt.putInt(WEAR_TIME_KEY, wearTime);
 
-                updateTexture(armorPiece, wearTime);
+                copperArmor.updateOxidationLevel(armorPiece, wearTime);
             }
         }
     }
 
-    private static void updateTexture(ItemStack armorPiece, int wearTime) {
+    private void updateOxidationLevel(ItemStack armorPiece, int wearTime) {
         int stage = wearTime / TICKS_PER_STAGE;
-
-        if (stage >= 3) {
-            setCustomTexture(armorPiece, "copper_fully_weathered");
-        } else if (stage == 2) {
-            setCustomTexture(armorPiece, "copper_semi_weathered");
-        } else if (stage == 1) {
-            setCustomTexture(armorPiece, "copper_lightly_weathered");
-        } else {
-            setCustomTexture(armorPiece, "copper_normal");
-        }
-    }
-
-    private static void setCustomTexture(ItemStack armorPiece, String textureName) {
-        CompoundTag nbt = (CompoundTag) armorPiece.getTags();
-        nbt.putString("CustomTexture", textureName);
+        setOxidationLevel(armorPiece, Math.min(stage, 3));
     }
 
     @OverrideOnly
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        CompoundTag nbt = (CompoundTag) stack.getTags();
-        String texture = nbt.getString("CustomTexture");
+        int oxidationLevel = getOxidationLevel(stack);
 
-        if (texture.isEmpty()) {
-            texture = "copper_normal";
+        String textureName;
+        switch (oxidationLevel) {
+            case 3: textureName = "copper_fully_weathered"; break;
+            case 2: textureName = "copper_semi_weathered"; break;
+            case 1: textureName = "copper_lightly_weathered"; break;
+            default: textureName = "copper_normal"; break;
         }
 
-        return String.format("modid:textures/models/armor/%s_layer_%d.png", texture, slot == EquipmentSlot.LEGS ? 2 : 1);
+        return String.format("modid:textures/models/armor/%s_layer_%d.png", textureName, slot == EquipmentSlot.LEGS ? 2 : 1);
     }
-
 }
-

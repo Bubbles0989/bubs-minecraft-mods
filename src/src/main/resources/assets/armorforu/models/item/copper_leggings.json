@@ -1,6 +1,20 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "armorforu:item/copper_leggings"
-  }
+    "layer0": "yourmod:item/copper_leggings_0"
+  },
+  "overrides": [
+    {
+      "predicate": { "oxidation_level": 1 },
+      "model": "yourmod:item/copper_leggings_1"
+    },
+    {
+      "predicate": { "oxidation_level": 2 },
+      "model": "yourmod:item/copper_leggings_2"
+    },
+    {
+      "predicate": { "oxidation_level": 3 },
+      "model": "yourmod:item/copper_leggings_3"
+    }
+  ]
 }
