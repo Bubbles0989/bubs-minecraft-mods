@@ -1,6 +1,8 @@
 package com.example.armorforu;
 
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -64,9 +66,18 @@ public class CreativeTabEventSubscriber {
             event.accept(ModItems.COPPER_CHESTPLATE.get());
             event.accept(ModItems.COPPER_LEGGINGS.get());
             event.accept(ModItems.COPPER_BOOTS.get());
+            event.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 1));
+            event.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 2));
+            event.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 3));
             event.accept(ModItems.TORCH_HELMET.get());
         }
     }
+
+    private static ItemStack createCopperArmorWithOxidation(Item item, int oxidationLevel) {
+        ItemStack itemStack = new ItemStack(item);
+        ((CopperArmorItem) itemStack.getItem()).setOxidationLevel(itemStack, oxidationLevel);
+        return itemStack;
+    }    
     
     public static ResourceLocation getResourceLocation(CreativeModeTab tab) {
         ResourceKey<CreativeModeTab> tabKey = BuiltInRegistries.CREATIVE_MODE_TAB.getResourceKey(tab).orElseThrow(

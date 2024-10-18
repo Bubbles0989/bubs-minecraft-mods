@@ -1,7 +1,7 @@
 package com.example.armorforu;
-
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 
@@ -56,7 +56,16 @@ public class ModCreativeTabs {
             output.accept(ModItems.COPPER_CHESTPLATE.get());
             output.accept(ModItems.COPPER_LEGGINGS.get());
             output.accept(ModItems.COPPER_BOOTS.get());
+            output.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 1));
+            output.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 2));
+            output.accept(createCopperArmorWithOxidation(ModItems.COPPER_HELMET.get(), 3));
             output.accept(ModItems.TORCH_HELMET.get());
         })
         .build();
+
+        private static ItemStack createCopperArmorWithOxidation(Item item, int oxidationLevel) {
+            ItemStack itemStack = new ItemStack(item);
+            ((CopperArmorItem) itemStack.getItem()).setOxidationLevel(itemStack, oxidationLevel);
+            return itemStack;
+        }   
 }
