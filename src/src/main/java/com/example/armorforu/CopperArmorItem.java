@@ -1,34 +1,60 @@
 package com.example.armorforu;
 
+import java.util.stream.Stream;
+
 import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
 import net.minecraft.core.Holder;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CopperArmorItem extends CustomArmorItem {
-    private static final String WEAR_TIME_KEY = "WearTime";
-    private static final String OXIDATION_LEVEL_KEY = "OxidationLevel";
-    private static final int TICKS_PER_STAGE = 20 * 60 * 10; 
+    private static final int TICKS_PER_STAGE = 20 * 60 * 10;
 
     public CopperArmorItem(Holder<ArmorMaterial> material, Type slot, Properties properties) {
         super(material, slot, properties);
     }
 
     public int getOxidationLevel(ItemStack stack) {
-        CompoundTag nbt = (CompoundTag) stack.getTags();
-        return nbt.getInt(OXIDATION_LEVEL_KEY);
+        // Check if the item has tags representing oxidation stages
+        Stream<TagKey<Item>> tags = stack.getTags();
+        if (tags.anyMatch(tag -> tag.equals(ModTags.Items.COPPER_ARMOR_FULLY_OXIDIZED))) {
+            return 3;
+        } else if (tags.anyMatch(tag -> tag.equals(ModTags.Items.COPPER_ARMOR_SEMI_OXIDIZED))) {
+            return 2;
+        } else if (tags.anyMatch(tag -> tag.equals(ModTags.Items.COPPER_ARMOR_LIGHTLY_OXIDIZED))) {
+            return 1;
+        } else {
+            return 0; // Normal state
+        }
     }
 
     public void setOxidationLevel(ItemStack stack, int level) {
-        CompoundTag nbt = (CompoundTag) stack.getTags();
-        nbt.putInt(OXIDATION_LEVEL_KEY, Math.min(3, Math.max(0, level)));
+        // Based on level, apply appropriate oxidation tag
+        // (This would typically involve modifying the item’s tags directly in a data pack)
+        // switch (level) {
+        //     case 3:
+        //         stack.addTag(ModTags.Items.COPPER_ARMOR_FULLY_OXIDIZED);
+        //         break;
+        //     case 2:
+        //         stack.addTag(ModTags.Items.COPPER_ARMOR_SEMI_OXIDIZED);
+        //         break;
+        //     case 1:
+        //         stack.addTag(ModTags.Items.COPPER_ARMOR_LIGHTLY_OXIDIZED);
+        //         break;
+        //     default:
+        //         stack.removeTag(ModTags.Items.COPPER_ARMOR_FULLY_OXIDIZED);
+        //         stack.removeTag(ModTags.Items.COPPER_ARMOR_SEMI_OXIDIZED);
+        //         stack.removeTag(ModTags.Items.COPPER_ARMOR_LIGHTLY_OXIDIZED);
+        //         break;
+        // }
     }
 
     @SubscribeEvent
@@ -37,20 +63,13 @@ public class CopperArmorItem extends CustomArmorItem {
 
         for (ItemStack armorPiece : player.getArmorSlots()) {
             if (armorPiece.getItem() instanceof CopperArmorItem copperArmor) {
-                CompoundTag nbt = (CompoundTag) armorPiece.getTags();
-                int wearTime = nbt.getInt(WEAR_TIME_KEY);
+                int wearTime = player.tickCount; // Use player tick count as a stand-in
 
-                wearTime++;
-                nbt.putInt(WEAR_TIME_KEY, wearTime);
-
-                copperArmor.updateOxidationLevel(armorPiece, wearTime);
+                // Calculate oxidation stage based on wear time
+                int stage = wearTime / TICKS_PER_STAGE;
+                copperArmor.setOxidationLevel(armorPiece, Math.min(stage, 3));
             }
         }
-    }
-
-    private void updateOxidationLevel(ItemStack armorPiece, int wearTime) {
-        int stage = wearTime / TICKS_PER_STAGE;
-        setOxidationLevel(armorPiece, Math.min(stage, 3));
     }
 
     @OverrideOnly
