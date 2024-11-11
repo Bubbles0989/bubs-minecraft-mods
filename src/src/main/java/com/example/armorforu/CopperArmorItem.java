@@ -4,7 +4,9 @@ import java.util.stream.Stream;
 
 import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -12,8 +14,59 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+
+// public class CopperArmorItem extends Block {
+
+//     // Enum to represent oxidation stages
+//     public enum OxidationStage {
+//         NORMAL,
+//         EXPOSED,
+//         WEATHERED,
+//         OXIDIZED;
+//     }
+
+//     // Constructor
+//     public CopperArmorItem(Properties properties) {
+//         super(properties);
+//     }
+
+//     // Returns the next oxidation stage for a block
+//     public static OxidationStage getNextOxidationStage(OxidationStage currentStage) {
+//         switch (currentStage) {
+//             case NORMAL:
+//                 return OxidationStage.EXPOSED;
+//             case EXPOSED:
+//                 return OxidationStage.WEATHERED;
+//             case WEATHERED:
+//                 return OxidationStage.OXIDIZED;
+//             default:
+//                 return OxidationStage.OXIDIZED; // Final stage remains oxidized
+//         }
+//     }
+
+//     // Called periodically to advance the oxidation stage
+//     @Override
+//     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+//         super.randomTick(state, level, pos, random);
+        
+//         // 20% chance to oxidize each tick
+//         if (random.nextFloat() < 0.2F) {
+//             OxidationStage currentStage = state.getValue(OXIDATION_STAGE); // Assuming OXIDATION_STAGE is a BlockState property
+//             OxidationStage nextStage = getNextOxidationStage(currentStage);
+
+//             // Update the block state to the next stage
+//             if (currentStage != nextStage) {
+//                 level.setBlock(pos, state.setValue(OXIDATION_STAGE, nextStage), 3);
+//             }
+//         }
+//     }
+// }
+
 
 public class CopperArmorItem extends CustomArmorItem {
     private static final int TICKS_PER_STAGE = 20 * 60 * 10;
@@ -23,7 +76,6 @@ public class CopperArmorItem extends CustomArmorItem {
     }
 
     public int getOxidationLevel(ItemStack stack) {
-        // Check if the item has tags representing oxidation stages
         Stream<TagKey<Item>> tags = stack.getTags();
         if (tags.anyMatch(tag -> tag.equals(ModTags.Items.COPPER_ARMOR_FULLY_OXIDIZED))) {
             return 3;
@@ -32,13 +84,11 @@ public class CopperArmorItem extends CustomArmorItem {
         } else if (tags.anyMatch(tag -> tag.equals(ModTags.Items.COPPER_ARMOR_LIGHTLY_OXIDIZED))) {
             return 1;
         } else {
-            return 0; // Normal state
+            return 0;
         }
     }
 
     public void setOxidationLevel(ItemStack stack, int level) {
-        // Based on level, apply appropriate oxidation tag
-        // (This would typically involve modifying the item’s tags directly in a data pack)
         // switch (level) {
         //     case 3:
         //         stack.addTag(ModTags.Items.COPPER_ARMOR_FULLY_OXIDIZED);
@@ -63,9 +113,8 @@ public class CopperArmorItem extends CustomArmorItem {
 
         for (ItemStack armorPiece : player.getArmorSlots()) {
             if (armorPiece.getItem() instanceof CopperArmorItem copperArmor) {
-                int wearTime = player.tickCount; // Use player tick count as a stand-in
+                int wearTime = player.tickCount;
 
-                // Calculate oxidation stage based on wear time
                 int stage = wearTime / TICKS_PER_STAGE;
                 copperArmor.setOxidationLevel(armorPiece, Math.min(stage, 3));
             }
